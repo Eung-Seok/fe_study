@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--label 태그: 폼 요소들에게 이름을 붙여줌-->
+
+    <!--label 암묵적인 방법-->
+    <label>치즈추가<input type="checkbox"></label>
+    <label>양배추추가<input type="checkbox"></label>
+    <label>패티추가<input type="checkbox"></label>
+
+    <br><br>
+    <!--
+        label 
+        명시적인 방법
+        id 속성 for 속성
+    -->
+    <label for="cheese">치즈추가</label>         <input type="checkbox" id="cheese">
+    <label for="cabage">양배추추가</label>         <input type="checkbox" id="cabage">
+    <label for="patty">패티추가</label>         <input type="checkbox" id="patty">
+
+    <br><br>
+
+    <!--fieldset과 legen로 속의 내용들을 하나의 박스형식으로 묶어줌    -->
+    <fieldset>
+        <legend>족발 사이즈 선택</legend>
+        <label>족발 대<input type="radio" name="size"></label>
+        <label>족발 중<input type="radio" name="size"></label>
+        <label>족발 소<input type="radio" name="size"></label>
+    </fieldset>
+
+    <fieldset>
+        <legend>블로그 글쓰기</legend>
+        제목 <input type="text" value="벨류속성이 초기값"> <br>
+        내용 <textarea>콘텐츠가 있는 태그</textarea>
+    </fieldset>
+
+    <br>
+
+    <!--select와 option을 사용해서 선택상자를 만들 수 있음-->
+    <select>
+        <option>기본김밥</option>
+        <option selected>참치김밥</option>
+        <option>치즈김밥</option>
+        <option>돈까스김밥</option>
+    </select>
+
+    <br>
+
+    <!--
+        multiple 속성: 다중선택이 가능해짐
+        size 속성: 몇개를 표시할 지 
+    -->
+    <select multiple size="5">
+        <optgroup label="김밥">
+            <option>기본김밥</option>
+            <option>참치김밥</option>
+            <option>치즈김밥</option>
+            <option>돈까스김밥</option>
+        </optgroup>
+        <optgroup label="햄버거">
+            <option>싸이버거</option>
+            <option>불고기버거</option>
+            <option selected>와퍼</option>
+            <option>징거버거</option>
+        </optgroup>
+    </select>
+
+    <br>
+
+    <button>버튼태그</button>
+    <input type="button" value="인풋버튼">
+    <input type="button" value="인풋리셋버튼">
+    <input type="button" value="인풋제출버튼">
+    <button type="sumbit">버튼태그</button>
+    <button type="button">버튼태그</button>
+
+    <button>
+        <img src="./img01.png">
+        이미지 들어간 버튼
+    </button>
+
+    <br><br>
+
+    <!--
+        disabled 속성: 해당 태그를 비활성화함
+        readonly 속성: 해당 태그를 읽기전용으로 만듦
+        maxlength 속성: 해당 태그의 최대 글자 수를 제한함
+    -->
+    내용 <textarea readonly>보기전용</textarea><br>
+    <button disabled>비활성화</button><br>
+    글자제한 <input type="text" maxlength="7">
+
+    <br><br>
+
+    일회용품을 받지 않겠습니다.<input type="checkbox">
+
+    <br><br>
+
+    <!--
+        value는 쓸 때 지우고 다시 써야한다
+        placeholder는 쓰기 시작하면 자동으로 사라진다
+    -->
+    <form>
+        <input type="text" value="아이디 입력">
+        <input type="text" placeholder="아이디 입력">
+        <input type="reset">
+        <input type="submit">
+        <br>
+        <button>이건 그냥 버튼</button>  <!--버튼은 기본적으로 submit과 같은 기능을 함-->
+        <button type="button">다른버튼</button>
+    </form>
+</body>
+</html>
