@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--audio video 미디어 표시하기-->
+    
+    <!--
+        conrtrol 속성: 영상이나 음성플레이 바가 나옴
+        autoplay 속성: 영상이나 음성을 자동으로 재생시킴
+    -->
+    <audio src="../../media/5second.mp3" controls></audio> <br>
+
+    <audio controls>
+        <source src="../../media/5second.mp3" type="audio/mpeg">
+        <source src="../../media/5second.ogg" type="audio/ogg">
+        <source src="../../media/5second.wav" type="audio/wav">
+    </audio><br>
+
+    <audio src="../../media/5second.mp3" controls autoplay muted></audio> <br>
+
+    <video src="../../media/5second.mp4" controls></video><br>
+
+    <video src="../../media/5second.mp4" autoplay muted loop></video>
+
+    <video controls>
+        <source src="../../media/5second.mp4" type="video/mp4">
+        <source src="../../media/5second.mmpeg" type="video/mpeg">
+        <source src="../../media/5second.avi" type="video/x-msvideo">
+    </video><br>
+
+    <iframe width="791" height="445" src="https://www.youtube.com/embed/1iAWK7DFADA" title="[에테리아] 테러마톤 연옥, 도키도키 연옥 가이드: 조합, 최소스펙, 클리어 영상" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</body>
+</html>
