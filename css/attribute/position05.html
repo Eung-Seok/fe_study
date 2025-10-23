@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            /*외부여백 0 */
+            padding: 0;
+            /* 내부여백 0 */
+            box-sizing: border-box;
+            /* 박스모델에 사이즈를 지정하면 border까지 사이즈를 지정함 */
+        }
+
+        .container {
+            width:400px;
+            height:400px;
+            position:relative;
+            margin:50px;
+        }
+
+        .contents {
+            width:400px;
+            height: 400px;
+            background-color: green;
+        }
+
+        .cloud-filter {
+            width:400px;
+            height: 400px;
+            background-color: black;
+            position:absolute;
+            top:0;
+            left:0;
+
+            /* opacity 속성 : 투명도 설정 */
+            opacity: 0.3 ;
+        }
+
+
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="contents"></div>
+        <div class="cloud-filter"></div>
+    </div>
+</body>
+
+</html>
