@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            /*외부여백 0 */
+            padding: 0;
+            /* 내부여백 0 */
+            box-sizing: border-box;
+            /* 박스모델에 사이즈를 지정하면 border까지 사이즈를 지정함 */
+        }
+
+        .box { width:200px; height:200px;}
+
+        .black-box {
+            border: 2px solid black;
+            display:inline-block;
+        }
+
+        .red-box {
+            background-color: red;
+            float:left;
+        }
+
+        .green-box { 
+            background-color: green;
+            float:left;
+        }
+        
+        .blue-box { 
+            background-color: blue;
+            float:left;
+        }
+
+        .next { background-color: gray;}
+
+        .clear-box { clear:both;}
+        /*
+            float(공중에 뜸)로 인해서 공간.위치 인식이 안될 때 해결방법
+
+            1. 그 크기만큼 차지하는 임의의 요소를 추가. (박스같은 것)
+            2. 클리어 속성 활용
+                1) float가 적용된 요소들 중 가장 끝 요소의 다음 요소에 적용
+                2) 가상요소 선택자 clear
+        */
+
+        .container::after {
+            content: ""; /* 컨텐츠가 없으면 작동을 안해서 필수로 넣기 */
+            display: block; /* content 기본 텍스트 inline -> block 변경 */
+            clear: both; /* float clear 처리 */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 줄바꿈 : <br>  띄어쓰기 : &nbsp; html은 아무리 많은 공간이 있어도 한칸으로만 인식함-->
+    <!-- 각각의 요소가 붙기를 원한다면 끝나는 태그를 밑으로 내려서 바로 쓰면 붙게된다.-->
+    <div class="box black-box">
+    </div><div class="box black-box">
+    </div><div class="box black-box"></div>
+
+    <div class="container">
+        <div class="box red-box"></div>
+        <div class="box green-box"></div>
+        <div class="box blue-box"></div>
+        <!-- <div class="clear-box"></div> -->
+    </div>
+
+    <!-- <div class=box"></div> -->
+    <div class="box next"></div>
+
+
+    자식은 부모크기를 무시하고 넘쳐버림
+    <!-- <div style="background-color: lightblue; overflow:scroll">
+        <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum ullam facilis voluptates accusantium error odit ducimus officia numquam eveniet, facere expedita assumenda quisquam cumque sunt rem nam! Facere, minus maiores.</span>
+        <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum ullam facilis voluptates accusantium error odit ducimus officia numquam eveniet, facere expedita assumenda quisquam cumque sunt rem nam! Facere, minus maiores.</span>
+        <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum ullam facilis voluptates accusantium error odit ducimus officia numquam eveniet, facere expedita assumenda quisquam cumque sunt rem nam! Facere, minus maiores.</span>
+        <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum ullam facilis voluptates accusantium error odit ducimus officia numquam eveniet, facere expedita assumenda quisquam cumque sunt rem nam! Facere, minus maiores.</span>
+
+    </div> -->
+
+    부모크기는 내가 담고 있는 자식의 크기만큼 맞춰짐
+</body>
+
+</html>
