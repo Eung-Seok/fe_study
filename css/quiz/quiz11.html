@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * { 
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container{
+            display:grid;
+            position:relative;
+            grid-template-rows: repeat(5,100px);
+            grid-template-columns: repeat(8,100px);
+
+            grid-template-areas:
+            "f1 f1 f1 f1 f2 f2 f2 f2"
+            "s1 s1 s1 s1 s1 s1 s1 s1"
+            "t1 t1 t1 t2 t2 t2 t2 t2"
+            "t1 t1 t1 t3 t3 t3 t3 t3"
+            "l1 l1 l2 l2 l3 l3 l4 l4";
+
+            place-self: center;
+            
+        }
+
+        #f1 {
+            background-color: orange;
+            grid-area: f1;
+            width:400px;
+        }
+        #f2 {
+            background-color: blue;
+            grid-area: f2;
+            width:400px;
+        }
+        #s1 {
+            background-color: red;
+            grid-area: s1;
+        }
+        #t1 {
+            background-color: green;
+            grid-area: t1;
+        }
+        #t2 {
+            background-color: lightgray;
+            grid-area: t2;
+        }
+        #t3 {
+            background-color: pink;
+            grid-area: t3;
+        }
+        #l1 {
+            background-color: purple;
+            grid-area: l1;
+        }
+        #l2 {
+            background-color: blue;
+            grid-area: l2;
+        }
+        #l3 {
+            background-color: red;
+            grid-area: l3;
+        }
+        #l4 {
+            background-color: lightblue;
+            grid-area: l4;
+        }
+    </style>
+</head>
+<body>
+    <div class="up">
+    <div class="container">
+        <div id="f1"></div>
+        <div id="f2"></div>
+        <div id="s1"></div>
+        <div id="t1"></div>
+        <div id="t2"></div>
+        <div id="t3"></div>
+        <div id="l1"></div>
+        <div id="l2"></div>
+        <div id="l3"></div>
+        <div id="l4"></div>
+    </div>
+    </div>
+</body>
+</html>
