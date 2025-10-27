@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            margin-top:20px;
+            margin-left: 10px;
+            position:relative;
+        }
+
+        .first {
+            animation-name: box-ani1;
+            animation-duration: 3s;
+
+            animation-fill-mode: both;
+            animation-iteration-count: infinite;
+        }
+        .second {
+            animation-name: box-ani2;
+            animation-duration: 4s;
+
+            animation-fill-mode: both;
+            animation-iteration-count: infinite;
+        }
+        .third {
+            animation-name: box-ani1;
+            animation-duration: 4s;
+
+            animation-fill-mode: both;
+            animation-iteration-count: infinite;
+        }
+        .box:hover {
+            animation-play-state: paused;
+        }
+        @keyframes box-ani1 {
+            0% {
+                background-color: blue;
+                margin-left: 10px;
+            }
+            25% {
+                background-color: orange;
+                margin-left: 100px;
+            }
+            50% {
+                background-color:   lightgray;
+                margin-left:200px
+            }
+            75% {
+                background-color: orange;
+                margin-left: 100px;
+            }
+            100% {
+                background-color:   blue;
+                margin-left:10px
+            }
+        }
+        @keyframes box-ani2 {
+            0% {
+                background-color: blue;
+                margin-top: 10px;
+            }
+            25% {
+                background-color: orange;
+                margin-top: 100px;
+            }
+            50% {
+                background-color:   lightgray;
+                margin-top:200px;
+            }
+            75% {
+                background-color: orange;
+                margin-top: 100px;
+            }
+            100% {
+                background-color:   blue;
+                margin-top:10px
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box first"></div>
+    <div class="box second"></div>
+    <div class="box third"></div>
+
+</body>
+</html>
