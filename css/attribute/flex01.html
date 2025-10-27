@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .item {
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+        }
+
+        .container {
+            display: flex;
+
+            /* flex-direction은 주축을 설정한다 */
+            /* flex-direction: column-reverse; */
+
+            /* flex-wrap은 화면 공간이 작아질 때 자동 줄바꿈을 할건지를 정함 */
+            flex-wrap:wrap;
+
+            /* justify-content는 주축을 기준으로 정렬한다 */
+            justify-content: space-evenly;      
+
+            /* align-items는 교차축을 기준으로 정렬한다 */
+            /* stretch는 부모의 높이를 다 차지한다 */
+            align-items: center;
+
+            /* align-content는 전체를 어디로 묶을 지를 정한다  */
+            /* align-content: center; */
+        
+            height:400px;
+            background-color: lightblue;
+        }
+
+        .content-center {
+            /* text-align: center;
+            padding-top:38px; */
+
+            /* 가운데 정렬 방법 */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container .item {
+            display:flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item content-center">4</div>
+        <div class="item content-center">5</div>
+        <div class="item">6</div>
+        <div class="item" stlye="align-self=flex-end">6</div>
+    </div>
+</body>
+
+</html>
