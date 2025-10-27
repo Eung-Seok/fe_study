@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+
+        }
+
+
+        .container {
+            background-color: lightgray;
+            position:relative
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            position:relative
+        }
+
+        .red {
+            background-color: red;
+
+            transition-property: width;
+            transition-duration: 3s;
+        }
+
+        .blue {
+            background-color: blue;
+
+            transition-property: background-color;
+            transition-duration: 3s;
+        }
+        .black {
+            background-color: black;
+
+            transition-property: margin-left;
+            transition-duration: 3s;
+        }
+        .green {
+            background-color: green;
+            display:inline-block;
+
+            transition-property: border;
+            transition-duration: 3s;
+        }
+        .yellow{
+            background-color: yellow;
+            display:inline-block;
+
+            transition-property: border;
+            transition-duration: 3s;
+        }
+        .green:hover {
+            border: 10px solid red;
+        }
+        .yellow:hover {
+            border: 10px solid red;
+        }
+        .container:hover .red {
+            width:400px
+        }
+        .container:hover .blue {
+            background-color: purple;
+        }
+        .container:hover .black {
+            margin-left:200px;
+            /* left:200px; */
+        }
+
+        
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="red box"></div>
+        <div class="blue box"></div>
+        <div class="black box"></div>
+        <div class="green box">    
+        </div><div class="yellow box"></div>
+    </div>
+</body>
+
+</html>
