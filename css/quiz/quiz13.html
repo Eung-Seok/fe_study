@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 800px;
+            margin: 0 auto;
+        }
+
+        .header {
+            display: flex;
+        }
+
+        .header-left {
+            background-color: yellow;
+            width: 400px;
+            height: 100px;
+        }
+
+        .header-right {
+            background-color: gray;
+            width: 400px;
+            height: 100px;
+        }
+        
+        .nav {
+            width:100%;
+            height: 100px;
+            background-color: purple;
+        }
+
+        .main {
+            display: flex;
+        }
+
+        .main-left {
+            width: 40%;
+            height:200px;
+            background-color: lightblue;
+        }
+
+        .main-right {
+            width: 60%;
+            background-color: antiquewhite;
+        }
+
+        .main-right-1 {
+            height:100px;
+            background-color: yellow;
+        }
+
+        .main-right-2 {
+            height:100px;
+            background-color: orange;
+        }
+        
+        .footer-1 {
+            width:25%; /* 800/4 = 200px */
+            height: 100px;
+            background-color: darkblue;
+        }
+
+        .footer-2 {
+            width:25%; /* 800/4 = 200px */
+            height: 100px;
+            background-color: darkgreen;
+        }
+
+        .footer-3 {
+            width:25%; /* 800/4 = 200px */
+            height: 100px;
+            background-color: lightseagreen;
+        }
+
+        .footer-4 {
+            width:25%; /* 800/4 = 200px */
+            height: 100px;
+            background-color: darkorange;
+        }
+
+        .footer {
+            display: flex;
+            width:100%;
+        }
+
+        @media screen and (max-width:700px) {
+            .container {
+                width:100%
+            }
+        }
+        @media screen and (max-width:650px) {
+            .footer {
+                flex-wrap: wrap;
+            }
+            .first {
+                width:50%;
+            }
+        }
+
+        @media screen and (max-width:500px) {
+            .container {
+                display:flex;
+                flex-direction: column;
+            }
+
+            .header {
+                flex-direction: column;
+                flex-wrap: wrap;
+            }
+            .header-left {
+                width:100%;
+        }
+            .header-right {
+                width:100%;
+        }
+
+        .main {
+            flex-wrap: wrap;
+        }
+        .main-left {
+            width: 100%;
+            height:200px;
+            background-color: lightblue;
+        }
+
+        .main-right {
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            background-color: antiquewhite;
+        }
+
+        .main-right-1 {
+            width:50%;
+            background-color: yellow;
+        }
+
+        .main-right-2 {
+            width:50%;
+            background-color: orange;
+        }
+        }
+
+        @media screen and (max-width:350px) {
+            .box {
+                width:100%;
+                height:100px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="header">
+            <div class="header-left box"></div>
+            <div class="header-right box"></div>
+        </div>
+
+        <div class="nav box"></div>
+
+        <div class="main">
+            <div class="main-left box"></div>
+            <div class="main-right">
+                <div class="main-right-1 box"></div>
+                <div class="main-right-2 box"></div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="footer-1 box first"></div>
+            <div class="footer-2 box first"></div>
+            <div class="footer-3 box first"></div>
+            <div class="footer-4 box first"></div>
+        </div>
+
+    </div>
+
+
+</body>
+</html>
