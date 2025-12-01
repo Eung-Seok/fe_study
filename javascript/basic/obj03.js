@@ -100,9 +100,9 @@ let obj = {
 };
 
 console.log(obj);
-obj.menu = '치즈김밥';
+obj.menu = '치즈김밥'; //키 값 수정
 console.log(obj)
-obj.price = 6000;
+obj.price = 6000; //키 값 추가
 console.log(obj)
-delete obj.price;
+delete obj.price; //키 값 삭제
 console.log(obj)
