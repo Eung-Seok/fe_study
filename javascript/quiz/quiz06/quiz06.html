@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>달식당 좋아요 <span id="heart">♡</span><span id="num"></span></h1>
+
+    <script>
+        let h = 0;
+        const heart = document.getElementById('heart');
+        const num = document.getElementById('num')
+        num.innerText = h;
+        heart.addEventListener('click', () => {
+            h++;
+            num.innerText = h;
+        })
+    </script>
+</body>
+</html>
